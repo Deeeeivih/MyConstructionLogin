@@ -9,7 +9,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>11</maven.compiler.release> <!-- Cambia a 8 si usas Java 8 -->
+        <maven.compiler.release>11</maven.compiler.release>
         <exec.mainClass>com.myconstruction.myconstructionlogin.MyConstructionLogin</exec.mainClass>
     </properties>
 
@@ -29,10 +29,31 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>11</source> <!-- Cambia a 8 si usas Java 8 -->
-                    <target>11</target> <!-- Cambia a 8 si usas Java 8 -->
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <!-- Sección para la publicación en Artifactory -->
+    <distributionManagement>
+        <repository>
+            <id>artifactory</id>
+            <url>https://trialk3owiz.jfrog.io/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>artifactory-snapshots</id>
+            <url>https://trialk3owiz.jfrog.io/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- Configuración para las credenciales de Artifactory -->
+    <servers>
+        <server>
+            <id>artifactory</id>
+            <username>daviddiazchamorro@gmail.com</username>
+            <password>cmVmdGtuOjAxOjE3Njc5MTk5NDg6TzE2bXJrcjc4R2tqUkhweGQ0V0VVQmdBTksx</password>
+        </server>
+    </servers>
 </project>
