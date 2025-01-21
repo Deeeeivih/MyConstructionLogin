@@ -5,7 +5,7 @@
     <groupId>com.myconstruction</groupId>
     <artifactId>MyConstructionLogin</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,25 +35,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <!-- Sección para la publicación en Artifactory -->
-    <distributionManagement>
-        <repository>
-            <id>artifactory</id>
-            <url>https://trialk3owiz.jfrog.io/artifactory/libs-release-local</url>
-        </repository>
-        <snapshotRepository>
-            <id>artifactory-snapshots</id>
-            <url>https://trialk3owiz.jfrog.io/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
-    </distributionManagement>
-
-    <!-- Configuración para las credenciales de Artifactory -->
-    <servers>
-        <server>
-            <id>artifactory</id>
-            <username>daviddiazchamorro@gmail.com</username>
-            <password>cmVmdGtuOjAxOjE3Njc5MTk5NDg6TzE2bXJrcjc4R2tqUkhweGQ0V0VVQmdBTksx</password>
-        </server>
-    </servers>
+    <finalName>MyConstruccion</finalName>
 </project>
